@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import style from '../style/StopWatch.module.scss'
 
 function StopWatch() {
     const [time, setTime] = useState(0);
@@ -36,13 +37,16 @@ function StopWatch() {
     };
 
     return (
-        <div className="stop-watch">
+        <div className={style.stop_watch}>
             <div>
                 StopWatch: {time}
             </div>
+            <div className={style.buttonContainer}>
             <button onClick={handleStart}>Start</button>
             <button onClick={handlePause}>Stop</button>
             <button onClick={handleReset}>Reset</button>
+            </div>
+            
         </div>
     );
 }
