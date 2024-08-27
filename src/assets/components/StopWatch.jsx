@@ -12,7 +12,7 @@ function StopWatch() {
         if (isActive === true && isPaused === false) {
             interval = setInterval(() => {
                 setTime((time) => time + 1);
-            }, 100);
+            }, 1000);
         } else {
             clearInterval(interval);
         }
@@ -39,7 +39,7 @@ function StopWatch() {
     return (
         <div className={style.stop_watch}>
             <div>
-                StopWatch: {time}
+                StopWatch: {time} 
             </div>
             <div className={style.buttonContainer}>
             <button onClick={handleStart}>Start</button>
